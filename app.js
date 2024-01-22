@@ -3,7 +3,6 @@ let vals = document.querySelectorAll(".button");
 let operations = document.querySelectorAll(".operation");
 let equal = document.querySelector(".equal");
 let ac = document.querySelector(".ac");
-let delet = document.querySelector(".del");
 
 vals.forEach((val) => {
   val.addEventListener("click", () => {
@@ -28,11 +27,13 @@ operations.forEach((operation) => {
       output.value += " " + "/" + " ";
     } else if (operation.value == "15") {
       output.value += " " + "%" + " ";
+    }else if(operation.value == "16"){
+      output.value += "."
     }
   });
 });
 
 equal.addEventListener("click", () => {
   let result = eval(output.value);
-  output.value = result;
+  output.value = parseFloat(result);
 });
