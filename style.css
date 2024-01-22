@@ -1,0 +1,62 @@
+@font-face {
+    font-family: myFont;
+    src: url("./font/digital-7.ttf");
+}
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: myFont;
+}
+.contenair{
+    background-color: rgb(219, 218, 218);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxOfCalculator{
+    width: fit-content;
+    height: 350px;
+    border-radius: 7px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 3px 2px 5px rgb(192, 191, 191);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 10px;
+}
+.output{
+    width: 100%;
+    padding: 0px 10px;
+    font-weight: bold;
+    font-size: 22px;
+    outline: none;
+    text-align: end;
+    border: none;
+    border-radius: 7px;
+    background: #eeeded;
+    height: 50px;
+}
+ul{
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+ul li{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    background: #eeeded;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+ul li::selection{
+    background: #eeeded;
+}
+.operation{
+    color: rgb(84, 84, 243);
+}
