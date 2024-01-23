@@ -7,14 +7,13 @@ let ac = document.querySelector(".ac");
 vals.forEach((val) => {
   val.addEventListener("click", () => {
     output.value += val.value;
-    console.log(output.value);
   });
 });
 
 ac.addEventListener("click", () => {
   output.value = "";
 });
-
+// there our operation buttons donst work it return 0 i use this slotion
 operations.forEach((operation) => {
   operation.addEventListener("click", () => {
     if (operation.value == "11") {
@@ -34,6 +33,7 @@ operations.forEach((operation) => {
 });
 
 equal.addEventListener("click", () => {
+  // if code was output.value = eval(output.value) in this case our code had bug and people can run js in our app or website
   let result = eval(output.value);
   output.value = parseFloat(result);
 });
